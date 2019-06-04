@@ -24,12 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)encodeUnicode:(NSString*)originStr;
 + (NSString*)decodeUnicode:(NSString*)originStr;
 
-+ (NSString*)encodeUTF8:(NSString*)originStr;
-+ (NSString*)decodeUTF8:(NSString*)originStr;
-
-+ (NSString*)encodeASCII:(NSString*)originStr;
-+ (NSString*)decodeASCII:(NSString*)originStr;
-
 @end
 
 NS_ASSUME_NONNULL_END

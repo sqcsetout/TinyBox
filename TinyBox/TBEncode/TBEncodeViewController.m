@@ -104,14 +104,6 @@
                 resultStr = [TBEncodeHelper encodeUnicode:originStr];
             }
                 break;
-            case TBEncodeType_UTF8: {
-                resultStr = [TBEncodeHelper encodeUTF8:originStr];
-            }
-                break;
-            case TBEncodeType_ASCII: {
-                resultStr = [TBEncodeHelper encodeASCII:originStr];
-            }
-                break;
             default:
                 break;
         }
@@ -132,14 +124,6 @@
                 break;
             case TBEncodeType_Unicode: {
                 resultStr = [TBEncodeHelper decodeUnicode:originStr];
-            }
-                break;
-            case TBEncodeType_UTF8: {
-                resultStr = [TBEncodeHelper decodeUTF8:originStr];
-            }
-                break;
-            case TBEncodeType_ASCII: {
-                resultStr = [TBEncodeHelper decodeASCII:originStr];
             }
                 break;
             default:

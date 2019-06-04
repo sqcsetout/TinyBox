@@ -25,8 +25,6 @@ typedef NS_ENUM(NSUInteger, TBEncodeType) {
     TBEncodeType_Url,
     TBEncodeType_Hex,
     TBEncodeType_Unicode,
-    TBEncodeType_UTF8,
-    TBEncodeType_ASCII,
 };
 
 

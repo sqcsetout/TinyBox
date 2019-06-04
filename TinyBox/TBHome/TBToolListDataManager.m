@@ -65,22 +65,10 @@
         item3.title = @"Unicode";
         item3.brief = @"Unicode";
         item3.encodeType = TBEncodeType_Unicode;
-
-        TBEncodeToolModel *item4 = [TBEncodeToolModel new];
-        item4.toolType = TBToolType_Encode;
-        item4.title = @"UTF8";
-        item4.brief = @"UTF8";
-        item4.encodeType = TBEncodeType_UTF8;
-
-        TBEncodeToolModel *item5 = [TBEncodeToolModel new];
-        item5.toolType = TBToolType_Encode;
-        item5.title = @"ASCII";
-        item5.brief = @"ASCII";
-        item5.encodeType = TBEncodeType_ASCII;
-
+        
         _encodeTools = [TBToolGroupModel new];
         _encodeTools.groupTitle = @"编解码";
-        _encodeTools.toolList = @[item0, item1, item2, item3, item4, item5];
+        _encodeTools.toolList = @[item0, item1, item2, item3];
     }
     
     return _encodeTools;
