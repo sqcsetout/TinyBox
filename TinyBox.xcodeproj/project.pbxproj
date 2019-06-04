@@ -23,6 +23,10 @@
 		68E7B8E922A4D0AF00B12E39 /* TBCollectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8E522A4D0AF00B12E39 /* TBCollectionHeadView.m */; };
 		68E7B8EC22A61CD800B12E39 /* TBHashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */; };
 		68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */; };
+		68E7B8F222A6340400B12E39 /* TBBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F122A6340400B12E39 /* TBBottomBar.m */; };
+		68E7B8F522A65F5700B12E39 /* UIColor+TB.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F422A65F5700B12E39 /* UIColor+TB.m */; };
+		68E7B8F822A66F8E00B12E39 /* TBEncodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */; };
+		68E7B8FB22A6797A00B12E39 /* TBHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,14 @@
 		68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBHashViewController.m; sourceTree = "<group>"; };
 		68E7B8ED22A61CF300B12E39 /* TBEncryptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEncryptViewController.h; sourceTree = "<group>"; };
 		68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncryptViewController.m; sourceTree = "<group>"; };
+		68E7B8F022A6340400B12E39 /* TBBottomBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBottomBar.h; sourceTree = "<group>"; };
+		68E7B8F122A6340400B12E39 /* TBBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBottomBar.m; sourceTree = "<group>"; };
+		68E7B8F322A65F5700B12E39 /* UIColor+TB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TB.h"; sourceTree = "<group>"; };
+		68E7B8F422A65F5700B12E39 /* UIColor+TB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TB.m"; sourceTree = "<group>"; };
+		68E7B8F622A66F8E00B12E39 /* TBEncodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEncodeHelper.h; sourceTree = "<group>"; };
+		68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncodeHelper.m; sourceTree = "<group>"; };
+		68E7B8F922A6797A00B12E39 /* TBHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBHashHelper.h; sourceTree = "<group>"; };
+		68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBHashHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,12 @@
 				687FA0D0229FD229006FC74F /* TBBaseViewController.m */,
 				687FA0D5229FD318006FC74F /* TBTitleBar.h */,
 				687FA0D6229FD318006FC74F /* TBTitleBar.m */,
+				68E7B8F022A6340400B12E39 /* TBBottomBar.h */,
+				68E7B8F122A6340400B12E39 /* TBBottomBar.m */,
 				687FA0DE229FE0F7006FC74F /* TBUtilty.h */,
 				687FA0DF229FE0F7006FC74F /* TBUtilty.m */,
+				68E7B8F322A65F5700B12E39 /* UIColor+TB.h */,
+				68E7B8F422A65F5700B12E39 /* UIColor+TB.m */,
 				68E7B8DA22A4CF0D00B12E39 /* TBHome */,
 				68E7B8D622A4C74C00B12E39 /* TBToolModel */,
 				687FA0EE22A12D04006FC74F /* TBColor */,
@@ -117,6 +133,8 @@
 			children = (
 				687FA0EF22A12F86006FC74F /* TBEncodeViewController.h */,
 				687FA0F022A12F86006FC74F /* TBEncodeViewController.m */,
+				68E7B8F622A66F8E00B12E39 /* TBEncodeHelper.h */,
+				68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */,
 			);
 			path = TBEncode;
 			sourceTree = "<group>";
@@ -135,6 +153,8 @@
 			children = (
 				68E7B8EA22A61CD800B12E39 /* TBHashViewController.h */,
 				68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */,
+				68E7B8F922A6797A00B12E39 /* TBHashHelper.h */,
+				68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */,
 			);
 			path = TBHash;
 			sourceTree = "<group>";
@@ -249,15 +269,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				68E7B8E922A4D0AF00B12E39 /* TBCollectionHeadView.m in Sources */,
+				68E7B8FB22A6797A00B12E39 /* TBHashHelper.m in Sources */,
 				68E7B8D922A4C7B100B12E39 /* TBToolModel.m in Sources */,
 				68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */,
 				68E7B8E722A4D0AF00B12E39 /* TBHomeViewController.m in Sources */,
 				687FA0D7229FD318006FC74F /* TBTitleBar.m in Sources */,
+				68E7B8F522A65F5700B12E39 /* UIColor+TB.m in Sources */,
 				68E7B8DD22A4CF3700B12E39 /* TBToolListDataManager.m in Sources */,
 				687FA0E0229FE0F7006FC74F /* TBUtilty.m in Sources */,
 				687FA0C6229FCA5D006FC74F /* main.m in Sources */,
 				687FA0F122A12F86006FC74F /* TBEncodeViewController.m in Sources */,
+				68E7B8F222A6340400B12E39 /* TBBottomBar.m in Sources */,
 				687FA0D1229FD229006FC74F /* TBBaseViewController.m in Sources */,
+				68E7B8F822A66F8E00B12E39 /* TBEncodeHelper.m in Sources */,
 				68E7B8E822A4D0AF00B12E39 /* TBToolListCell.m in Sources */,
 				687FA0B8229FCA5C006FC74F /* AppDelegate.m in Sources */,
 				68E7B8E622A4D0AF00B12E39 /* TBCollectionFootView.m in Sources */,

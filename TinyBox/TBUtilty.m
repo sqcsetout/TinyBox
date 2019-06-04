@@ -16,10 +16,12 @@
     return (MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) == 896.0) || (MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) == 812.0);
 }
 
-+ (CGFloat)getTitleBarHeight
-{
++ (CGFloat)getTitleBarHeight {
     return [TBUtilty isIphoneX]? 88.0: 44.0;
 }
 
++ (CGFloat)getBottomBarHeight {
+    return [TBUtilty isIphoneX]? 74: 40;
+}
 
 @end
