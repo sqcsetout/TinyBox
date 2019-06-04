@@ -1,8 +1,8 @@
 //
-//  TBEncodeViewController.h
+//  TBHashViewController.h
 //  TinyBox
 //
-//  Created by shenqichen on 2019/5/31.
+//  Created by shenqichen on 2019/6/4.
 //  Copyright © 2019 shenqichen. All rights reserved.
 //
 
@@ -12,9 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TBEncodeViewController : TBBaseViewController
+@interface TBHashViewController : TBBaseViewController
 
-- (instancetype)initWithModel:(TBEncodeToolModel*)toolModel;
+- (instancetype)initWithModel:(TBHashToolModel*)toolModel;
 
 @end
 

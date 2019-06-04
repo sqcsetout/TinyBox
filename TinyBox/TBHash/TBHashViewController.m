@@ -1,22 +1,22 @@
 //
-//  TBEncodeViewController.m
+//  TBHashViewController.m
 //  TinyBox
 //
-//  Created by shenqichen on 2019/5/31.
+//  Created by shenqichen on 2019/6/4.
 //  Copyright © 2019 shenqichen. All rights reserved.
 //
 
-#import "TBEncodeViewController.h"
+#import "TBHashViewController.h"
 
-@interface TBEncodeViewController ()
+@interface TBHashViewController ()
 
-@property (nonatomic, retain) TBEncodeToolModel *toolModel;
+@property (nonatomic, retain) TBHashToolModel *toolModel;
 
 @end
 
-@implementation TBEncodeViewController
+@implementation TBHashViewController
 
-- (instancetype)initWithModel:(TBEncodeToolModel*)toolModel {
+- (instancetype)initWithModel:(TBHashToolModel*)toolModel {
     if (self = [super init]) {
         self.toolModel = toolModel;
     }
@@ -34,6 +34,5 @@
     [self.view addSubview:self.titleBar];
     [self.titleBar setTitle:self.toolModel.title];
 }
-
 
 @end

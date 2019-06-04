@@ -21,6 +21,8 @@
 		68E7B8E722A4D0AF00B12E39 /* TBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8E122A4D0AF00B12E39 /* TBHomeViewController.m */; };
 		68E7B8E822A4D0AF00B12E39 /* TBToolListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8E422A4D0AF00B12E39 /* TBToolListCell.m */; };
 		68E7B8E922A4D0AF00B12E39 /* TBCollectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8E522A4D0AF00B12E39 /* TBCollectionHeadView.m */; };
+		68E7B8EC22A61CD800B12E39 /* TBHashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */; };
+		68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,10 @@
 		68E7B8E322A4D0AF00B12E39 /* TBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHomeViewController.h; sourceTree = "<group>"; };
 		68E7B8E422A4D0AF00B12E39 /* TBToolListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBToolListCell.m; sourceTree = "<group>"; };
 		68E7B8E522A4D0AF00B12E39 /* TBCollectionHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCollectionHeadView.m; sourceTree = "<group>"; };
+		68E7B8EA22A61CD800B12E39 /* TBHashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBHashViewController.h; sourceTree = "<group>"; };
+		68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBHashViewController.m; sourceTree = "<group>"; };
+		68E7B8ED22A61CF300B12E39 /* TBEncryptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEncryptViewController.h; sourceTree = "<group>"; };
+		68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncryptViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 		687FA0EB22A12C7B006FC74F /* TBEncrypt */ = {
 			isa = PBXGroup;
 			children = (
+				68E7B8ED22A61CF300B12E39 /* TBEncryptViewController.h */,
+				68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */,
 			);
 			path = TBEncrypt;
 			sourceTree = "<group>";
@@ -125,6 +133,8 @@
 		687FA0EC22A12CDD006FC74F /* TBHash */ = {
 			isa = PBXGroup;
 			children = (
+				68E7B8EA22A61CD800B12E39 /* TBHashViewController.h */,
+				68E7B8EB22A61CD800B12E39 /* TBHashViewController.m */,
 			);
 			path = TBHash;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			files = (
 				68E7B8E922A4D0AF00B12E39 /* TBCollectionHeadView.m in Sources */,
 				68E7B8D922A4C7B100B12E39 /* TBToolModel.m in Sources */,
+				68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */,
 				68E7B8E722A4D0AF00B12E39 /* TBHomeViewController.m in Sources */,
 				687FA0D7229FD318006FC74F /* TBTitleBar.m in Sources */,
 				68E7B8DD22A4CF3700B12E39 /* TBToolListDataManager.m in Sources */,
@@ -250,6 +261,7 @@
 				68E7B8E822A4D0AF00B12E39 /* TBToolListCell.m in Sources */,
 				687FA0B8229FCA5C006FC74F /* AppDelegate.m in Sources */,
 				68E7B8E622A4D0AF00B12E39 /* TBCollectionFootView.m in Sources */,
+				68E7B8EC22A61CD800B12E39 /* TBHashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

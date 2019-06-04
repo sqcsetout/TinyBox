@@ -16,16 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configTitleBar];
-}
-
-- (void)configTitleBar {
-    self.titleBar = [[TBTitleBar alloc] initWithController:self];
-    [self.view addSubview:self.titleBar];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewWillLayoutSubviews {
-    if (self.titleBar.superview == self.view) {
+    if (self.titleBar && self.titleBar.superview == self.view) {
         [self.view bringSubviewToFront:self.titleBar];
     }
 }

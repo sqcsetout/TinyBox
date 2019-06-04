@@ -11,8 +11,11 @@
 #import "TBToolListCell.h"
 #import "TBCollectionHeadView.h"
 #import "TBCollectionFootView.h"
-#import "TBEncodeViewController.h"
 #import "TBToolListDataManager.h"
+#import "TBEncodeViewController.h"
+#import "TBEncryptViewController.h"
+#import "TBHashViewController.h"
+
 
 #define kTBToolListCellIdentify @"kTBToolListCellIdentify"
 #define kTBToolListHeadIdentify @"kTBToolListHeadIdentify"
@@ -90,8 +93,22 @@
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
     
-    TBEncodeViewController *encodeVC = [[TBEncodeViewController alloc] init];
-    [self.navigationController pushViewController:encodeVC animated:YES];
+    if (indexPath.section < self.toolGroups.count) {
+        TBToolGroupModel *groupModel = self.toolGroups[indexPath.section];
+        if (indexPath.row < groupModel.toolList.count) {
+            TBToolModel *toolModel = groupModel.toolList[indexPath.row];
+            if ([toolModel isKindOfClass:[TBEncodeToolModel class]]) {
+                TBEncodeViewController *encodeVC = [[TBEncodeViewController alloc] initWithModel:(TBEncodeToolModel*)toolModel];;
+                [self.navigationController pushViewController:encodeVC animated:YES];
+            } else if ([toolModel isKindOfClass:[TBEncryptToolModel class]]) {
+                TBEncryptViewController *encryptVC = [[TBEncryptViewController alloc] initWithModel:(TBEncryptToolModel*)toolModel];
+                [self.navigationController pushViewController:encryptVC animated:YES];
+            } else if ([toolModel isKindOfClass:[TBHashToolModel class]]) {
+                TBHashViewController *hashVC = [[TBHashViewController alloc] initWithModel:(TBHashToolModel*)toolModel];
+                [self.navigationController pushViewController:hashVC animated:YES];
+            }
+        }
+    }
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
