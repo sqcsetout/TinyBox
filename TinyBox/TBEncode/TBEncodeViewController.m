@@ -17,6 +17,8 @@
 @property (nonatomic, retain) TBEncodeToolModel *toolModel;
 @property (nonatomic, retain) TBBottomBar *bottomBar;
 
+@property (nonatomic, retain) UILabel *briefLabel;
+
 @property (nonatomic, retain) UILabel *inputLabel;
 @property (nonatomic, retain) UITextView *inputText;
 
@@ -56,6 +58,15 @@
 
 - (void)initSubview {
     CGFloat startY = TBTitleBarHeight + 20;
+    self.briefLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 60)];
+    self.briefLabel.textColor = [UIColor colorForHex:0xEFEEB6];
+    self.briefLabel.font = [UIFont systemFontOfSize:16];
+    self.briefLabel.text = self.toolModel.brief;
+    self.briefLabel.numberOfLines = 3;
+    self.briefLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    [self.view addSubview:self.briefLabel];
+
+    startY = self.briefLabel.frame.origin.y + self.briefLabel.frame.size.height + 20;
     self.inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
     self.inputLabel.textColor = KTBDefaultTextColor;
     self.inputLabel.font = [UIFont systemFontOfSize:16];
