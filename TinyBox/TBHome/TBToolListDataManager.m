@@ -94,15 +94,9 @@
         item2.brief = @"TripleDES";
         item2.encryptType = TBEncryptType_TripleDES;
 
-        TBEncryptToolModel *item3 = [TBEncryptToolModel new];
-        item3.toolType = TBToolType_Encrypt;
-        item3.title = @"RC4";
-        item3.brief = @"RC4";
-        item3.encryptType = TBEncryptType_RC4;
-        
         _encryptTools = [TBToolGroupModel new];
         _encryptTools.groupTitle = @"加解密";
-        _encryptTools.toolList = @[item0, item1, item2, item3];
+        _encryptTools.toolList = @[item0, item1, item2];
     }
     
     return _encryptTools;

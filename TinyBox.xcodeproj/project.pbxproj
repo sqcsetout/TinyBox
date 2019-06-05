@@ -28,6 +28,11 @@
 		68E7B8F822A66F8E00B12E39 /* TBEncodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */; };
 		68E7B8FB22A6797A00B12E39 /* TBHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */; };
 		68E7B90722A76FF500B12E39 /* TBEncryptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B90622A76FF500B12E39 /* TBEncryptHelper.m */; };
+		68E7B90C22A7B7C400B12E39 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B90B22A7B7C400B12E39 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68E7B91722A7BA3400B12E39 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B90E22A7BA3400B12E39 /* NSString+Base64.m */; };
+		68E7B91822A7BA3400B12E39 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B90F22A7BA3400B12E39 /* AESCrypt.m */; };
+		68E7B91A22A7BA3400B12E39 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B91522A7BA3400B12E39 /* NSData+CommonCrypto.m */; };
+		68E7B91B22A7BA3400B12E39 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B91622A7BA3400B12E39 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,17 @@
 		68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBHashHelper.m; sourceTree = "<group>"; };
 		68E7B90522A76FF500B12E39 /* TBEncryptHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEncryptHelper.h; sourceTree = "<group>"; };
 		68E7B90622A76FF500B12E39 /* TBEncryptHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncryptHelper.m; sourceTree = "<group>"; };
+		68E7B90922A7B7C400B12E39 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		68E7B90A22A7B7C400B12E39 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		68E7B90B22A7B7C400B12E39 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		68E7B90E22A7BA3400B12E39 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		68E7B90F22A7BA3400B12E39 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		68E7B91022A7BA3400B12E39 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		68E7B91122A7BA3400B12E39 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		68E7B91322A7BA3400B12E39 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		68E7B91422A7BA3400B12E39 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		68E7B91522A7BA3400B12E39 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		68E7B91622A7BA3400B12E39 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,8 @@
 		687FA0B5229FCA5C006FC74F /* TinyBox */ = {
 			isa = PBXGroup;
 			children = (
+				68E7B90D22A7BA3400B12E39 /* AESCrypt */,
+				68E7B90822A7B7C400B12E39 /* GTMBase64 */,
 				687FA0B6229FCA5C006FC74F /* AppDelegate.h */,
 				687FA0B7229FCA5C006FC74F /* AppDelegate.m */,
 				687FA0BF229FCA5D006FC74F /* Assets.xcassets */,
@@ -204,6 +222,31 @@
 			path = TBHome;
 			sourceTree = "<group>";
 		};
+		68E7B90822A7B7C400B12E39 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				68E7B90922A7B7C400B12E39 /* GTMBase64.h */,
+				68E7B90A22A7B7C400B12E39 /* GTMDefines.h */,
+				68E7B90B22A7B7C400B12E39 /* GTMBase64.m */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		68E7B90D22A7BA3400B12E39 /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				68E7B91322A7BA3400B12E39 /* AESCrypt.h */,
+				68E7B90F22A7BA3400B12E39 /* AESCrypt.m */,
+				68E7B91022A7BA3400B12E39 /* NSData+Base64.h */,
+				68E7B91622A7BA3400B12E39 /* NSData+Base64.m */,
+				68E7B91122A7BA3400B12E39 /* NSData+CommonCrypto.h */,
+				68E7B91522A7BA3400B12E39 /* NSData+CommonCrypto.m */,
+				68E7B91422A7BA3400B12E39 /* NSString+Base64.h */,
+				68E7B90E22A7BA3400B12E39 /* NSString+Base64.m */,
+			);
+			path = AESCrypt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,16 +321,21 @@
 				68E7B8D922A4C7B100B12E39 /* TBToolModel.m in Sources */,
 				68E7B90722A76FF500B12E39 /* TBEncryptHelper.m in Sources */,
 				68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */,
+				68E7B91B22A7BA3400B12E39 /* NSData+Base64.m in Sources */,
 				68E7B8E722A4D0AF00B12E39 /* TBHomeViewController.m in Sources */,
+				68E7B91722A7BA3400B12E39 /* NSString+Base64.m in Sources */,
 				687FA0D7229FD318006FC74F /* TBTitleBar.m in Sources */,
+				68E7B90C22A7B7C400B12E39 /* GTMBase64.m in Sources */,
 				68E7B8F522A65F5700B12E39 /* UIColor+TB.m in Sources */,
 				68E7B8DD22A4CF3700B12E39 /* TBToolListDataManager.m in Sources */,
 				687FA0E0229FE0F7006FC74F /* TBUtilty.m in Sources */,
 				687FA0C6229FCA5D006FC74F /* main.m in Sources */,
 				687FA0F122A12F86006FC74F /* TBEncodeViewController.m in Sources */,
+				68E7B91822A7BA3400B12E39 /* AESCrypt.m in Sources */,
 				68E7B8F222A6340400B12E39 /* TBBottomBar.m in Sources */,
 				687FA0D1229FD229006FC74F /* TBBaseViewController.m in Sources */,
 				68E7B8F822A66F8E00B12E39 /* TBEncodeHelper.m in Sources */,
+				68E7B91A22A7BA3400B12E39 /* NSData+CommonCrypto.m in Sources */,
 				68E7B8E822A4D0AF00B12E39 /* TBToolListCell.m in Sources */,
 				687FA0B8229FCA5C006FC74F /* AppDelegate.m in Sources */,
 				68E7B8E622A4D0AF00B12E39 /* TBCollectionFootView.m in Sources */,

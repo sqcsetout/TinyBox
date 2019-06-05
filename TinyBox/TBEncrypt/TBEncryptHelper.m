@@ -9,6 +9,9 @@
 #import "TBEncryptHelper.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
+#import "GTMBase64.h"
+#import "AESCrypt.h"
+
 
 @interface NSData (AES256)
 
@@ -144,28 +147,155 @@
 }
 
 + (NSString*)encryptDES:(NSString*)originStr key:(NSString*)key {
-    return nil;
+    NSString *inputText = originStr;
+    if (!inputText) {
+        return nil;
+    }
+    NSData* data = [inputText dataUsingEncoding:NSUTF8StringEncoding];
+    size_t inputTextBufferSize = [data length];
+    const void *vinputText = (const void *)[data bytes];
+    
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (inputTextBufferSize + kCCBlockSizeDES) & ~(kCCBlockSizeDES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [key UTF8String];
+    const void *vinitVec = (const void *) nil;
+    
+    ccStatus = CCCrypt(kCCEncrypt,
+                       kCCAlgorithmDES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySizeDES,
+                       vinitVec,
+                       vinputText,
+                       inputTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSData *myData = [NSData dataWithBytes:(const void *)bufferPtr length:(NSUInteger)movedBytes];
+    NSString *result = [GTMBase64 stringByEncodingData:myData];
+    return result;
 }
 
 + (NSString*)decryptDES:(NSString*)originStr key:(NSString*)key {
-    return nil;
+    NSString *inputText = originStr;
+    if (!inputText) {
+        return nil;
+    }
+    NSData *decryptData = [GTMBase64 decodeString:inputText];
+    size_t inputTextBufferSize = [decryptData length];
+    const void *vinputText = [decryptData bytes];
+    
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (inputTextBufferSize + kCCBlockSizeDES) & ~(kCCBlockSizeDES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [key UTF8String];
+    const void *vinitVec = (const void *) nil;
+    
+    ccStatus = CCCrypt(kCCDecrypt,
+                       kCCAlgorithmDES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySizeDES,
+                       vinitVec,
+                       vinputText,
+                       inputTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSString *result = [[NSString alloc] initWithData:[NSData dataWithBytes:(const void *)bufferPtr
+                                                                     length:(NSUInteger)movedBytes] encoding:NSUTF8StringEncoding] ;
+    return result;
 }
 
 + (NSString*)encrypt3DES:(NSString*)originStr key:(NSString*)key {
-    return nil;
+    NSString *inputText = originStr;
+    if (!inputText) {
+        return nil;
+    }
+    NSData* data = [inputText dataUsingEncoding:NSUTF8StringEncoding];
+    size_t inputTextBufferSize = [data length];
+    const void *vinputText = (const void *)[data bytes];
+    
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (inputTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [key UTF8String];
+    const void *vinitVec = (const void *) nil;
+    
+    ccStatus = CCCrypt(kCCEncrypt,
+                       kCCAlgorithm3DES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySize3DES,
+                       vinitVec,
+                       vinputText,
+                       inputTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSData *myData = [NSData dataWithBytes:(const void *)bufferPtr length:(NSUInteger)movedBytes];
+    NSString *result = [GTMBase64 stringByEncodingData:myData];
+    return result;
 }
 
 + (NSString*)decrypt3DES:(NSString*)originStr key:(NSString*)key {
-    return nil;
+    NSString *inputText = originStr;
+    if (!inputText) {
+        return nil;
+    }
+    NSData *decryptData = [GTMBase64 decodeString:inputText];
+    size_t inputTextBufferSize = [decryptData length];
+    const void *vinputText = [decryptData bytes];
+    
+    CCCryptorStatus ccStatus;
+    uint8_t *bufferPtr = NULL;
+    size_t bufferPtrSize = 0;
+    size_t movedBytes = 0;
+    
+    bufferPtrSize = (inputTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
+    bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+    memset((void *)bufferPtr, 0x0, bufferPtrSize);
+    
+    const void *vkey = (const void *) [key UTF8String];
+    const void *vinitVec = (const void *) nil;
+    
+    ccStatus = CCCrypt(kCCDecrypt,
+                       kCCAlgorithm3DES,
+                       kCCOptionPKCS7Padding,
+                       vkey,
+                       kCCKeySize3DES,
+                       vinitVec,
+                       vinputText,
+                       inputTextBufferSize,
+                       (void *)bufferPtr,
+                       bufferPtrSize,
+                       &movedBytes);
+    
+    NSString *result = [[NSString alloc] initWithData:[NSData dataWithBytes:(const void *)bufferPtr
+                                                                     length:(NSUInteger)movedBytes] encoding:NSUTF8StringEncoding] ;
+    return result;
 }
-
-+ (NSString*)encryptRC4:(NSString*)originStr key:(NSString*)key {
-    return nil;
-}
-
-+ (NSString*)decryptRC4:(NSString*)originStr key:(NSString*)key {
-    return nil;
-}
-
 
 @end

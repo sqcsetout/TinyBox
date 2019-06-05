@@ -32,7 +32,6 @@ typedef NS_ENUM(NSUInteger, TBEncryptType) {
     TBEncryptType_AES,
     TBEncryptType_DES,
     TBEncryptType_TripleDES,
-    TBEncryptType_RC4,
 };
 
 

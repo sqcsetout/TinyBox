@@ -21,9 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString*)encrypt3DES:(NSString*)originStr key:(NSString*)key;
 + (NSString*)decrypt3DES:(NSString*)originStr key:(NSString*)key;
 
-+ (NSString*)encryptRC4:(NSString*)originStr key:(NSString*)key;
-+ (NSString*)decryptRC4:(NSString*)originStr key:(NSString*)key;
-
 @end
 
 NS_ASSUME_NONNULL_END

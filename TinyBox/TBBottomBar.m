@@ -19,8 +19,8 @@
 @implementation TBBottomBar
 
 - (instancetype)initWithTitle:(NSString*)title delegate:(id<TBBottomBarDelegate>)delegate {
-    if (self = [super initWithFrame:CGRectMake(0, kScreenHeight-TBBottomBarHeight, kScreenWidth, TBBottomBarHeight)]) {
-        self.convertBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 40)];
+    if (self = [super initWithFrame:CGRectMake(0, kScreenHeight-TBBottomBarHeight-kTBDefaultMargin, kScreenWidth, TBBottomBarHeight)]) {
+        self.convertBtn = [[UIButton alloc] initWithFrame:CGRectMake(kTBDefaultMargin, 0, kScreenWidth-2*kTBDefaultMargin, 40)];
         [self addSubview:self.convertBtn];
         [self.convertBtn setTitle:title forState:UIControlStateNormal];
         self.convertBtn.backgroundColor = [UIColor colorForHex:0x690CFF];

@@ -107,11 +107,11 @@
         }
             break;
         case TBEncryptType_DES: {
-//            resultStr = [TBHashHelper hashSHA1:originStr];
+            resultStr = [TBEncryptHelper encryptDES:originStr key:keyStr];
         }
             break;
         case TBEncryptType_TripleDES: {
-//            resultStr = [TBHashHelper hashSHA256:originStr];
+            resultStr = [TBEncryptHelper encrypt3DES:originStr key:keyStr];
         }
             break;
         default:
