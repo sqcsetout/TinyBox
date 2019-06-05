@@ -15,12 +15,9 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIImage *backBtnImage;
 
-@property (nonatomic, assign) BOOL hideBackBtn;
-
-@property (nonatomic, strong) UIView *bgView;
-@property (nonatomic, strong) UILabel * titleLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *backButton;
-@property (nonatomic, strong) UIButton *shareButton;
+@property (nonatomic, strong) UIButton *moreButton;
 
 @property (nonatomic, weak) UIViewController *controller;
 
@@ -40,10 +37,10 @@
 }
 
 - (void)initSubView {
-    self.backgroundColor = [UIColor yellowColor];
+    self.backgroundColor = [UIColor colorForHex:0x413C3B];
     [self addSubview:self.titleLabel];
     [self addSubview:self.backButton];
-    [self addSubview:self.shareButton];
+    [self addSubview:self.moreButton];
 }
 
 - (void)safeAreaInsetsDidChange
@@ -56,10 +53,9 @@
 {
     [super layoutSubviews];
     self.frame = CGRectMake(0, 0, self.controller.view.bounds.size.width, TBTitleBarHeight);
-    self.bgView.frame = CGRectMake(0,CGRectGetHeight(self.bounds)-0.5, CGRectGetWidth(self.bounds), 0.5);
-    self.titleLabel.frame = CGRectMake(65, self.frame.size.height-43, [UIScreen mainScreen].bounds.size.width-130, 44);
-    self.backButton.frame = CGRectMake(0, self.frame.size.height - 44, 44, 44);
-    self.shareButton.frame = CGRectMake(self.frame.size.width - 44, self.frame.size.height - 44, 44, 44);
+    self.titleLabel.frame = CGRectMake(65, self.frame.size.height-44, [UIScreen mainScreen].bounds.size.width-130, 44);
+    self.backButton.frame = CGRectMake(0, self.frame.size.height-44, 44, 44);
+    self.moreButton.frame = CGRectMake(self.frame.size.width-44, self.frame.size.height-44, 44, 44);
 }
 
 #pragma mark - Actions
@@ -89,53 +85,35 @@
     self.backButton.hidden = _hideBackBtn;
 }
 
-- (void)showShareWithTarget:(nullable id)target action:(SEL)action
-{
-    self.shareButton.hidden = NO;
-    [self.shareButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-}
-
 #pragma mark - Getter
-- (UIView *)bgView{
-    if (!_bgView) {
-        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0,CGRectGetHeight(self.bounds)-0.5, CGRectGetWidth(self.bounds), 0.5)];
-        _bgView.backgroundColor = [UIColor clearColor];
-    }
-    return _bgView;
-}
-
 - (UILabel *)titleLabel{
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(65, self.frame.size.height-44, [UIScreen mainScreen].bounds.size.width-130, 44)];
-        _titleLabel.font=[UIFont systemFontOfSize:18.f];
+        _titleLabel.font = [UIFont systemFontOfSize:18.f];
         _titleLabel.backgroundColor=[UIColor clearColor];
-        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.textColor = KTBDefaultTextColor;
         _titleLabel.textAlignment=NSTextAlignmentCenter;
-        _titleLabel.text = @"标题";
+        _titleLabel.text = @" ";
     }
     return _titleLabel;
 }
 
 - (UIButton *)backButton{
     if (!_backButton) {
-        /**
-         * AaronLee 备注
-         * 调整位置，防止bundle加载完成后rn的返回位置出现跳动
-         **/
-        _backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
-        [_backButton setImage:[UIImage imageNamed:@"icon_arrow_left_gray"] forState:UIControlStateNormal];
+        _backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        [_backButton setImage:[UIImage imageNamed:@"icon_back"] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(backAtion) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backButton;
 }
 
-- (UIButton *)shareButton{
-    if (!_shareButton) {
-        _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 44, 44)];
-        [_shareButton setImage:[UIImage imageNamed:@"detail_icon_share_gray"] forState:UIControlStateNormal];
-        _shareButton.hidden = YES;
+- (UIButton *)moreButton{
+    if (!_moreButton) {
+        _moreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        [_moreButton setImage:[UIImage imageNamed:@"icon_more"] forState:UIControlStateNormal];
+        _moreButton.hidden = YES;
     }
-    return _shareButton;
+    return _moreButton;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TBBaseViewController.h"
+#import "TBUtilty.h"
 
 @interface TBBaseViewController ()
 
@@ -14,9 +15,13 @@
 
 @implementation TBBaseViewController
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kTBDefaultBgColor;
 }
 
 - (void)viewWillLayoutSubviews {

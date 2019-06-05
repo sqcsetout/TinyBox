@@ -56,23 +56,31 @@
 
 - (void)initSubview {
     CGFloat startY = TBTitleBarHeight + 20;
-    self.inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.inputLabel.text = @"输入";
+    self.inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
+    self.inputLabel.textColor = KTBDefaultTextColor;
+    self.inputLabel.font = [UIFont systemFontOfSize:16];
+    self.inputLabel.text = @"输入:";
     [self.view addSubview:self.inputLabel];
     
-    startY = self.inputLabel.frame.origin.y + self.inputLabel.frame.size.height + 20;
-    self.inputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 100)];
-    self.inputText.backgroundColor = [UIColor colorForHex:0xECECEC];
+    startY = self.inputLabel.frame.origin.y + self.inputLabel.frame.size.height + 10;
+    self.inputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 120)];
+    self.inputText.backgroundColor = kTBDefaultTextViewBgColor;
+    self.inputText.textColor = KTBDefaultTextColor;
+    self.inputText.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:self.inputText];
     
-    startY = self.inputText.frame.origin.y + self.inputText.frame.size.height + 20;
-    self.outputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.outputLabel.text = @"结果";
+    startY = self.inputText.frame.origin.y + self.inputText.frame.size.height + 30;
+    self.outputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
+    self.outputLabel.textColor = KTBDefaultTextColor;
+    self.outputLabel.font = [UIFont systemFontOfSize:16];
+    self.outputLabel.text = @"结果:";
     [self.view addSubview:self.outputLabel];
     
-    startY = self.outputLabel.frame.origin.y + self.outputLabel.frame.size.height + 20;
-    self.outputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 100)];
-    self.outputText.backgroundColor = [UIColor colorForHex:0xECECEC];
+    startY = self.outputLabel.frame.origin.y + self.outputLabel.frame.size.height + 10;
+    self.outputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 120)];
+    self.outputText.backgroundColor = kTBDefaultTextViewBgColor;
+    self.outputText.textColor = KTBDefaultTextColor;
+    self.outputText.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:self.outputText];
 }
 

@@ -7,7 +7,16 @@
 //
 
 #import "TBCollectionFootView.h"
+#import "TBUtilty.h"
 
 @implementation TBCollectionFootView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+//        self.backgroundColor = [UIColor colorForHex:0x3F3F3F];
+    }
+    
+    return self;
+}
 
 @end

@@ -41,10 +41,11 @@
     self.titleBar = [[TBTitleBar alloc] initWithController:self];
     [self.view addSubview:self.titleBar];
     [self.titleBar setTitle:@"工具箱"];
+    self.titleBar.hideBackBtn = YES;
 }
 
 - (void)addContentView {
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kTBDefaultBgColor;
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     flowLayout.minimumLineSpacing = 0;
@@ -161,7 +162,6 @@
         
     } else if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
         TBCollectionFootView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:kTBToolListFootIdentify forIndexPath:indexPath];
-        footView.backgroundColor = [UIColor grayColor];
         return footView;
     }
     
@@ -171,8 +171,8 @@
 #pragma mark  定义每个UICollectionView的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat width = kScreenWidth/2 - kTBStyleItemMarginHorizontal*1.5;
-    return CGSizeMake(width, width*0.4);
+    CGFloat width = kScreenWidth;
+    return CGSizeMake(width, 60);
 }
 
 

@@ -12,8 +12,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define kCollectionHeadHeight 30
-#define kCollectionHeadLabelHeight 20
+#define kCollectionHeadHeight 44
+#define kCollectionHeadLabelHeight 40
 
 @interface TBCollectionHeadView : UICollectionReusableView
 

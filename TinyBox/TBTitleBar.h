@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TBTitleBar : UIView
 
+@property (nonatomic, assign) BOOL hideBackBtn;
+
 - (instancetype)initWithController:(UIViewController*)controller;
 - (void)setTitle:(NSString *)title;
 

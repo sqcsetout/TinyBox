@@ -20,7 +20,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor blueColor];
+        self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
         [self initSubview];
     }
@@ -31,15 +31,17 @@
     self.titleLabel = [UILabel new];
     self.titleLabel.tintColor = [UIColor blackColor];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.font = [UIFont systemFontOfSize:18];
-    self.titleLabel.backgroundColor = [UIColor clearColor];
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
+    self.titleLabel.textColor = [UIColor colorForHex:0xE7CBBB];
+    self.titleLabel.backgroundColor = [UIColor colorForHex:0x38312D];
     [self addSubview:self.titleLabel];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.titleLabel.frame = self.bounds;
-    self.titleLabel.text = self.toolModel.title;
+    CGRect frame = CGRectMake(kTBDefaultMargin, 6, kScreenWidth-2*kTBDefaultMargin, self.frame.size.height-12);
+    self.titleLabel.frame = frame;
+    self.titleLabel.text = [NSString stringWithFormat:@"# %@",self.toolModel.title];
 }
 
 - (void)updateToolModel:(TBToolModel*)toolModel {

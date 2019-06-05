@@ -23,8 +23,8 @@
         self.convertBtn = [[UIButton alloc] initWithFrame:CGRectMake(kTBDefaultMargin, 0, kScreenWidth-2*kTBDefaultMargin, 40)];
         [self addSubview:self.convertBtn];
         [self.convertBtn setTitle:title forState:UIControlStateNormal];
-        self.convertBtn.backgroundColor = [UIColor colorForHex:0x690CFF];
-        
+        self.convertBtn.backgroundColor = [UIColor colorForHex:0x37312E];
+        self.convertBtn.titleLabel.textColor = KTBDefaultTextColor;
         [self.convertBtn addTarget:self action:@selector(onClickConvertBtn) forControlEvents:UIControlEventTouchUpInside];
 
         self.delegate = delegate;

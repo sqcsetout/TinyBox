@@ -20,10 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 #define TBTitleBarHeight ([TBUtilty getTitleBarHeight])
 #define TBBottomBarHeight ([TBUtilty getBottomBarHeight])
 
-#define kTBStyleItemMarginVertical 10
-#define kTBStyleItemMarginHorizontal 20
+#define kTBStyleItemMarginVertical 6
+#define kTBStyleItemMarginHorizontal 0
 
 #define kTBDefaultMargin 20
+#define KTBDefaultTextColor ([UIColor colorForHex:0xE2EBCF])
+#define kTBDefaultBgColor ([UIColor colorForHex:0x312D2E])
+#define kTBDefaultTextViewBgColor ([UIColor colorForHex:0x403935])
+
 
 @interface TBUtilty : NSObject
 

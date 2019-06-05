@@ -20,6 +20,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor colorForHex:0x2D282A];
         [self initSubview];
     }
     
@@ -30,14 +31,15 @@
     self.titleLabel = [UILabel new];
     self.titleLabel.tintColor = [UIColor blackColor];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
-    self.titleLabel.font = [UIFont systemFontOfSize:18];
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
+    self.titleLabel.textColor = KTBDefaultTextColor;
     self.titleLabel.backgroundColor = [UIColor clearColor];
     [self addSubview:self.titleLabel];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.titleLabel.frame = CGRectMake(20, kCollectionHeadHeight-kCollectionHeadLabelHeight, kScreenWidth/2-20, kCollectionHeadLabelHeight);
+    self.titleLabel.frame = CGRectMake(24, kCollectionHeadHeight-kCollectionHeadLabelHeight, kScreenWidth/2-24, kCollectionHeadLabelHeight);
     self.titleLabel.text = self.groupModel.groupTitle;
 }
 

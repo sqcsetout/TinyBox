@@ -210,10 +210,10 @@
 			children = (
 				68E7B8E322A4D0AF00B12E39 /* TBHomeViewController.h */,
 				68E7B8E122A4D0AF00B12E39 /* TBHomeViewController.m */,
-				68E7B8DF22A4D0AF00B12E39 /* TBCollectionFootView.h */,
-				68E7B8E022A4D0AF00B12E39 /* TBCollectionFootView.m */,
 				68E7B8DE22A4D0AF00B12E39 /* TBCollectionHeadView.h */,
 				68E7B8E522A4D0AF00B12E39 /* TBCollectionHeadView.m */,
+				68E7B8DF22A4D0AF00B12E39 /* TBCollectionFootView.h */,
+				68E7B8E022A4D0AF00B12E39 /* TBCollectionFootView.m */,
 				68E7B8E222A4D0AF00B12E39 /* TBToolListCell.h */,
 				68E7B8E422A4D0AF00B12E39 /* TBToolListCell.m */,
 				68E7B8DB22A4CF3700B12E39 /* TBToolListDataManager.h */,

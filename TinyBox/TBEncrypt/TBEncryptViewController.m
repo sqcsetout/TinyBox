@@ -60,33 +60,45 @@
 
 - (void)initSubview {
     CGFloat startY = TBTitleBarHeight + 20;
-    self.inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.inputLabel.text = @"明文";
+    self.inputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
+    self.inputLabel.textColor = KTBDefaultTextColor;
+    self.inputLabel.font = [UIFont systemFontOfSize:16];
+    self.inputLabel.text = @"明文:";
     [self.view addSubview:self.inputLabel];
     
-    startY = self.inputLabel.frame.origin.y + self.inputLabel.frame.size.height + 20;
-    self.inputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 100)];
-    self.inputText.backgroundColor = [UIColor colorForHex:0xECECEC];
+    startY = self.inputLabel.frame.origin.y + self.inputLabel.frame.size.height + 10;
+    self.inputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 120)];
+    self.inputText.backgroundColor = kTBDefaultTextViewBgColor;
+    self.inputText.textColor = KTBDefaultTextColor;
+    self.inputText.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:self.inputText];
     
     startY = self.inputText.frame.origin.y + self.inputText.frame.size.height + 20;
-    self.keyLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.keyLabel.text = @"密码";
+    self.keyLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
+    self.keyLabel.textColor = KTBDefaultTextColor;
+    self.keyLabel.font = [UIFont systemFontOfSize:16];
+    self.keyLabel.text = @"密码:";
     [self.view addSubview:self.keyLabel];
     
-    startY = self.keyLabel.frame.origin.y + self.keyLabel.frame.size.height + 20;
+    startY = self.keyLabel.frame.origin.y + self.keyLabel.frame.size.height + 10;
     self.keyText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.keyText.backgroundColor = [UIColor colorForHex:0xECECEC];
+    self.keyText.backgroundColor = kTBDefaultTextViewBgColor;
+    self.keyText.textColor = KTBDefaultTextColor;
+    self.keyText.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:self.keyText];
     
     startY = self.keyText.frame.origin.y + self.keyText.frame.size.height + 20;
-    self.outputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
-    self.outputLabel.text = @"密文";
+    self.outputLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 40)];
+    self.outputLabel.textColor = KTBDefaultTextColor;
+    self.outputLabel.font = [UIFont systemFontOfSize:16];
+    self.outputLabel.text = @"密文:";
     [self.view addSubview:self.outputLabel];
     
-    startY = self.outputLabel.frame.origin.y + self.outputLabel.frame.size.height + 20;
-    self.outputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 100)];
-    self.outputText.backgroundColor = [UIColor colorForHex:0xECECEC];
+    startY = self.outputLabel.frame.origin.y + self.outputLabel.frame.size.height + 10;
+    self.outputText = [[UITextView alloc] initWithFrame:CGRectMake(kTBDefaultMargin, startY, kScreenWidth-2*kTBDefaultMargin, 120)];
+    self.outputText.backgroundColor = kTBDefaultTextViewBgColor;
+    self.outputText.textColor = KTBDefaultTextColor;
+    self.outputText.font = [UIFont systemFontOfSize:14];
     [self.view addSubview:self.outputText];
 }
 
