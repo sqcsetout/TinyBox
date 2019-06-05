@@ -172,7 +172,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat width = kScreenWidth/2 - kTBStyleItemMarginHorizontal*1.5;
-    return CGSizeMake(width, width*0.6);
+    return CGSizeMake(width, width*0.4);
 }
 
 

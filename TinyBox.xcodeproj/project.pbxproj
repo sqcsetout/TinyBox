@@ -27,6 +27,7 @@
 		68E7B8F522A65F5700B12E39 /* UIColor+TB.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F422A65F5700B12E39 /* UIColor+TB.m */; };
 		68E7B8F822A66F8E00B12E39 /* TBEncodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */; };
 		68E7B8FB22A6797A00B12E39 /* TBHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */; };
+		68E7B90722A76FF500B12E39 /* TBEncryptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7B90622A76FF500B12E39 /* TBEncryptHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		68E7B8F722A66F8E00B12E39 /* TBEncodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncodeHelper.m; sourceTree = "<group>"; };
 		68E7B8F922A6797A00B12E39 /* TBHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBHashHelper.h; sourceTree = "<group>"; };
 		68E7B8FA22A6797A00B12E39 /* TBHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBHashHelper.m; sourceTree = "<group>"; };
+		68E7B90522A76FF500B12E39 /* TBEncryptHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEncryptHelper.h; sourceTree = "<group>"; };
+		68E7B90622A76FF500B12E39 /* TBEncryptHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBEncryptHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 			children = (
 				68E7B8ED22A61CF300B12E39 /* TBEncryptViewController.h */,
 				68E7B8EE22A61CF300B12E39 /* TBEncryptViewController.m */,
+				68E7B90522A76FF500B12E39 /* TBEncryptHelper.h */,
+				68E7B90622A76FF500B12E39 /* TBEncryptHelper.m */,
 			);
 			path = TBEncrypt;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				68E7B8E922A4D0AF00B12E39 /* TBCollectionHeadView.m in Sources */,
 				68E7B8FB22A6797A00B12E39 /* TBHashHelper.m in Sources */,
 				68E7B8D922A4C7B100B12E39 /* TBToolModel.m in Sources */,
+				68E7B90722A76FF500B12E39 /* TBEncryptHelper.m in Sources */,
 				68E7B8EF22A61CF300B12E39 /* TBEncryptViewController.m in Sources */,
 				68E7B8E722A4D0AF00B12E39 /* TBHomeViewController.m in Sources */,
 				687FA0D7229FD318006FC74F /* TBTitleBar.m in Sources */,
