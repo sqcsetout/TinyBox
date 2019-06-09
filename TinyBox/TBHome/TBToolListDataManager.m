@@ -79,19 +79,19 @@
         TBEncryptToolModel *item0 = [TBEncryptToolModel new];
         item0.toolType = TBToolType_Encrypt;
         item0.title = @"AES";
-        item0.brief = @"AES是一种区块加密标准。这里ECB模式,密钥长度128。";
+        item0.brief = @"AES是一种高级区块加密标准，已经被多方分析且广为全世界所使用。这里AES128使用ECB加密模式，PKCS7填充。";
         item0.encryptType = TBEncryptType_AES;
         
         TBEncryptToolModel *item1 = [TBEncryptToolModel new];
         item1.toolType = TBToolType_Encrypt;
         item1.title = @"DES";
-        item1.brief = @"DES";
+        item1.brief = @"DES，数据加密标准，是一种使用密钥加密的块算法。这里的结果使用EBC加密模式，PKCS7填充。";
         item1.encryptType = TBEncryptType_DES;
 
         TBEncryptToolModel *item2 = [TBEncryptToolModel new];
         item2.toolType = TBToolType_Encrypt;
         item2.title = @"TripleDES";
-        item2.brief = @"TripleDES是DES向AES过渡的加密算法，它使用3条56位的密钥对数据进行三次加密。是DES的一个更安全的变形。";
+        item2.brief = @"TripleDES是DES向AES过渡的加密算法，它相当于是对每个数据块应用三次DES加密算法。是DES的一个更安全的变形。";
         item2.encryptType = TBEncryptType_TripleDES;
 
         _encryptTools = [TBToolGroupModel new];
@@ -108,19 +108,19 @@
         TBHashToolModel *item0 = [TBHashToolModel new];
         item0.toolType = TBToolType_Hash;
         item0.title = @"MD5";
-        item0.brief = @"MD5";
+        item0.brief = @"MD5消息摘要算法，一种被广泛使用的密码散列函数，可以产生出一个128位的散列值，用于确保信息传输完整一致。";
         item0.hashType = TBHashType_MD5;
 
         TBHashToolModel *item1 = [TBHashToolModel new];
         item1.toolType = TBToolType_Hash;
         item1.title = @"SHA1";
-        item1.brief = @"SHA1";
+        item1.brief = @"SHA1，安全哈希算法，主要适用于数字签名算法。对于长度小于2^64位的消息，SHA1会产生一个160位的消息摘要。";
         item1.hashType = TBHashType_SHA1;
 
         TBHashToolModel *item2 = [TBHashToolModel new];
         item2.toolType = TBToolType_Hash;
         item2.title = @"SHA256";
-        item2.brief = @"SHA256";
+        item2.brief = @"SHA256是SHA-2下细分出的一种算法。对于任意长度的消息，SHA256都会产生一个256位长的哈希值，称作消息摘要。";
         item2.hashType = TBHashType_SHA256;
 
         _hashTools = [TBToolGroupModel new];

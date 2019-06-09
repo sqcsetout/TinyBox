@@ -55,7 +55,7 @@
 }
 
 - (void)configBottomBar {
-    self.bottomBar = [[TBBottomBar alloc] initWithTitle:@"加密(ECB,密钥长度128,Hex输出)" delegate:self];
+    self.bottomBar = [[TBBottomBar alloc] initWithTitle:@"加密" delegate:self];
     [self.view addSubview:self.bottomBar];
 }
 
