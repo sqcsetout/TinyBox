@@ -17,7 +17,7 @@
 }
 
 + (CGFloat)getTitleBarHeight {
-    return [TBUtilty isIphoneX]? 88.0: 44.0;
+    return [TBUtilty isIphoneX]? 88.0: 64.0;
 }
 
 + (CGFloat)getBottomBarHeight {
