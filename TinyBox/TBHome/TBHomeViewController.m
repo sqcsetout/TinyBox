@@ -165,7 +165,7 @@
         return footView;
     }
     
-    return nil;
+    return [UICollectionReusableView new];
 }
 
 #pragma mark  定义每个UICollectionView的大小
