@@ -68,6 +68,9 @@
     self.scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapScrollView)];
+    [self.scrollView addGestureRecognizer:tapGesture];
+    [tapGesture setNumberOfTapsRequired:1];
 
     CGFloat startY = TBTitleBarHeight + 10;
     self.briefLabel = [[UILabel alloc] initWithFrame:CGRectMake(kTBDefaultMargin+4, startY, kScreenWidth-2*kTBDefaultMargin, 60)];
@@ -153,6 +156,12 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.inputText resignFirstResponder];
+    [self.keyText resignFirstResponder];
+    [self.outputText resignFirstResponder];
+}
+
+- (void)onTapScrollView {
     [self.inputText resignFirstResponder];
     [self.keyText resignFirstResponder];
     [self.outputText resignFirstResponder];
